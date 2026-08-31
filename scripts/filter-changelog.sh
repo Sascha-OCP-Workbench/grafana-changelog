@@ -57,8 +57,19 @@ if [ -s "$terms" ]; then
       echo
       echo "<details><summary>Weggefilterte Eintraege (${removed})</summary>"
       echo
-      # Fuehrende Listenmarkierung entfernen, jede Zeile als eigener Listenpunkt.
-      sed -E 's/^[[:space:]]*[-*][[:space:]]+//' "$dropped" | sed 's/^/- /'
+      # Weggefilterte Eintraege als Tabelle: Kopfzeile + Trennzeile aus der Quelle,
+      # dann die entfernten Tabellenzeilen (Reihenfolge bleibt erhalten). Markdown
+      # rendert Tabellen auch innerhalb von <details>, sofern eine Leerzeile davor
+      # steht (die echo oben liefert sie).
+      hdr="$(grep -m1 -E '^\| *Version ' "$SRC" || true)"
+      sep="$(grep -m1 -E '^\|[-: |]+$' "$SRC" || true)"
+      rows="$(grep -E '^\|' "$dropped" || true)"
+      if [ -n "$hdr" ] && [ -n "$sep" ] && [ -n "$rows" ]; then
+        printf '%s\n%s\n%s\n' "$hdr" "$sep" "$rows"
+      else
+        # Fallback (keine Tabellenzeilen erkannt): als einfache Liste ausgeben.
+        sed -E 's/^[[:space:]]*[-*][[:space:]]+//' "$dropped" | sed 's/^/- /'
+      fi
       echo
       echo "</details>"
     fi
