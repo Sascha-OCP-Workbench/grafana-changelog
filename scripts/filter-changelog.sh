@@ -39,14 +39,28 @@ fi
 if [ -s "$terms" ]; then
   # Filtern via awk (Teilstring, case-insensitiv). Bewusst KEIN 'grep -i': der
   # msys/git-bash-grep stuerzt mit -i reproduzierbar ab (SIGABRT).
-  removed=$(awk -v termsfile="$terms" -v out="$OUT" '
+  # Gehaltene Zeilen -> $OUT, entfernte Zeilen -> $dropped (fuer die Auflistung).
+  dropped="$(mktemp)"; trap 'rm -f "$terms" "$dropped"' EXIT
+  removed=$(awk -v termsfile="$terms" -v out="$OUT" -v dropfile="$dropped" '
     BEGIN { n=0; while ((getline t < termsfile) > 0) if (length(t)) terms[++n]=tolower(t) }
     { low=tolower($0); hit=0; for (i=1;i<=n;i++) if (index(low, terms[i])) { hit=1; break }
-      if (hit) removed++; else print > out }
+      if (hit) { removed++; if (length($0)) print > dropfile } else print > out }
     END { print removed+0 }
   ' "$SRC")
   used="$(paste -sd, "$terms")"
-  { echo; echo "---"; echo "_Lokal gefiltert aus ${SRC##*/}: ${removed} Zeile(n) entfernt (Blacklist: ${used})._"; } >> "$OUT"
+  {
+    echo; echo "---"
+    echo "_Lokal gefiltert aus ${SRC##*/}: ${removed} Zeile(n) entfernt (Blacklist: ${used})._"
+    if [ -s "$dropped" ]; then
+      echo
+      echo "<details><summary>Weggefilterte Eintraege (${removed})</summary>"
+      echo
+      # Fuehrende Listenmarkierung entfernen, jede Zeile als eigener Listenpunkt.
+      sed -E 's/^[[:space:]]*[-*][[:space:]]+//' "$dropped" | sed 's/^/- /'
+      echo
+      echo "</details>"
+    fi
+  } >> "$OUT"
 else
   removed=0
   cp "$SRC" "$OUT"
