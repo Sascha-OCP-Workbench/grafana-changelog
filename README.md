@@ -7,6 +7,8 @@ Fokus: die **Open-Source-Variante** von Grafana. Rein Enterprise-/Cloud-exklusiv
 
 Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **Hilfreiche Informationen**, **Nur Enterprise/Cloud (irrelevant)**.
 
+**Breaking Changes** enthaelt nur, was Grafana selbst als solche kennzeichnet. Zusaetzlich markieren zwei Icons einzelne Punkte: ⚠️ _potenziell breaking_ (nicht offiziell als Breaking Change gekennzeichnet, kann aber Bestehendes brechen) und 🔧 _neuer Default_ (Verhalten ab jetzt standardmaessig aktiv/geaendert).
+
 > Dieses Repo enthaelt **nur die Ergebnisse** und kann read-only geteilt werden.
 > Der Source-Code der erzeugenden GitHub Action liegt in einem separaten (privaten) Repo.
 
