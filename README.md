@@ -5,6 +5,10 @@ offiziellen GitHub Release Notes und dem "What's new"-Katalog (inkl. Deep-Links)
 
 Fokus: die **Open-Source-Variante** von Grafana. Rein Enterprise-/Cloud-exklusive Features werden als _irrelevant_ ausgewiesen, nicht ausfuehrlich behandelt.
 
+> 🤖 **KI-unterstuetzt entwickelt.** Dieses Projekt wurde mit Unterstuetzung von KI (Claude / Claude Code) erstellt, und die Zusammenfassungen unten werden von einem Sprachmodell erzeugt. Im Zweifel bitte gegen die offiziellen Grafana-Quellen pruefen.
+
+> 📄 **Lizenz:** [MIT](LICENSE) — frei nutzbar (auch kommerziell), Namens-/Lizenzhinweis beibehalten. Die zusammengefassten Grafana-Inhalte unterliegen der Lizenz von Grafana Labs.
+
 Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **Hilfreiche Informationen**, **Nur Enterprise/Cloud (irrelevant)**.
 
 **Breaking Changes** enthaelt nur, was Grafana selbst als solche kennzeichnet. Zusaetzlich markieren zwei Icons einzelne Punkte: ⚠️ _potenziell breaking_ (nicht offiziell als Breaking Change gekennzeichnet, kann aber Bestehendes brechen) und 🔧 _neuer Default_ (Verhalten ab jetzt standardmaessig aktiv/geaendert).
