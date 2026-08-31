@@ -18,7 +18,7 @@ Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **H
 
 ## Releases
 
-- [Grafana 13.2.0](releases/grafana-13.2.0.md)
+- Grafana 13.2.0: [Tabelle](releases/grafana-13.2.0-table.md) · [Prosa](releases/grafana-13.2.0.md)
 - [Grafana 13.1.4](releases/grafana-13.1.4.md)
 - [Grafana 13.1.3](releases/grafana-13.1.3.md)
 - [Grafana 13.1.2](releases/grafana-13.1.2.md)
