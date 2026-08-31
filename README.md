@@ -1,9 +1,11 @@
 # Grafana Changelog
 
 Deutschsprachige Zusammenfassungen der Grafana-Releases — automatisch erzeugt aus den
-offiziellen GitHub Release Notes und der "What's new"-Doku, aufbereitet via Claude.
+offiziellen GitHub Release Notes und dem "What's new"-Katalog (inkl. Deep-Links), aufbereitet via Claude.
 
-Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **Hilfreiche Informationen**.
+Fokus: die **Open-Source-Variante** von Grafana. Rein Enterprise-/Cloud-exklusive Features werden als _irrelevant_ ausgewiesen, nicht ausfuehrlich behandelt.
+
+Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **Hilfreiche Informationen**, **Nur Enterprise/Cloud (irrelevant)**.
 
 > Dieses Repo enthaelt **nur die Ergebnisse** und kann read-only geteilt werden.
 > Der Source-Code der erzeugenden GitHub Action liegt in einem separaten (privaten) Repo.
@@ -30,6 +32,13 @@ Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **H
 - [Grafana 12.4.6](releases/grafana-12.4.6.md)
 - [Grafana 12.4.5](releases/grafana-12.4.5.md)
 - [Grafana 12.4.4](releases/grafana-12.4.4.md)
+- [Grafana 12.4.3+security-02](releases/grafana-12.4.3+security-02.md)
+- [Grafana 12.4.3](releases/grafana-12.4.3.md)
+- [Grafana 12.4.2](releases/grafana-12.4.2.md)
+- [Grafana 12.4.1](releases/grafana-12.4.1.md)
+- [Grafana 12.4.0](releases/grafana-12.4.0.md)
+- [Grafana 12.3.11](releases/grafana-12.3.11.md)
+- [Grafana 12.3.10](releases/grafana-12.3.10.md)
 - [Grafana 12.3.6+security-04](releases/grafana-12.3.6+security-04.md)
 - [Grafana 12.3.6+security-01](releases/grafana-12.3.6+security-01.md)
 - [Grafana 12.3.6](releases/grafana-12.3.6.md)
