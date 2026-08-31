@@ -63,8 +63,12 @@ if [ -s "$terms" ]; then
       # steht (die echo oben liefert sie).
       hdr="$(grep -m1 -E '^\| *Version ' "$SRC" || true)"
       sep="$(grep -m1 -E '^\|[-: |]+$' "$SRC" || true)"
-      rows="$(grep -E '^\|' "$dropped" || true)"
+      # Weggefilterte Zeilen: ⛔ ("Feature wird nicht genutzt") vorn in Spalte 7
+      # (letzte Tabellenzelle) einfuegen, damit der Kunde je Zeile entscheiden kann.
+      rows="$(grep -E '^\|' "$dropped" | sed -E 's/\|([^|]*)\|$/| ⛔\1|/' || true)"
       if [ -n "$hdr" ] && [ -n "$sep" ] && [ -n "$rows" ]; then
+        echo "_⛔ = Feature wird (aktuell lokal) nicht genutzt — ggf. dennoch aufnehmen._"
+        echo
         printf '%s\n%s\n%s\n' "$hdr" "$sep" "$rows"
       else
         # Fallback (keine Tabellenzeilen erkannt): als einfache Liste ausgeben.
