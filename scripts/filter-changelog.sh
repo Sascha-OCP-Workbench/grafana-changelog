@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-# Erzeugt aus releases/grafana-<version>.md eine LOKAL gefilterte Fassung, in der
-# alle Zeilen mit Stichwoertern aus einer Blacklist entfernt sind.
+# Erzeugt aus der TABELLEN-Fassung releases/grafana-<version>-table.md eine LOKAL
+# gefilterte Fassung, in der alle Tabellenzeilen mit Stichwoertern aus einer
+# Blacklist entfernt sind. Arbeitet ausschliesslich auf dem Tabellen-Changelog
+# (nicht auf der Prosa-Fassung grafana-<version>.md).
 #
 # Sinn: Fuer bestimmte Zielgruppen irrelevante Themen (z.B. "azure", "alerting")
 # ausblenden, ohne den offiziellen Changelog zu veraendern. blacklist.txt und der
@@ -21,14 +23,14 @@ cd "$REPO_ROOT"
 
 [ $# -ge 1 ] || { echo "Usage: $0 <version>  (z.B. 13.2.0)" >&2; exit 1; }
 
-# Version normalisieren: 'grafana-' / fuehrendes 'v' / '.md' abstreifen.
-ver="$1"; ver="${ver#grafana-}"; ver="${ver#v}"; ver="${ver%.md}"
-SRC="releases/grafana-${ver}.md"
-[ -f "$SRC" ] || { echo "Nicht gefunden: $SRC" >&2; exit 1; }
+# Version normalisieren: 'grafana-' / fuehrendes 'v' / '-table' / '.md' abstreifen.
+ver="$1"; ver="${ver#grafana-}"; ver="${ver#v}"; ver="${ver%.md}"; ver="${ver%-table}"
+SRC="releases/grafana-${ver}-table.md"
+[ -f "$SRC" ] || { echo "Nicht gefunden: $SRC (nur Tabellen-Changelogs werden gefiltert)" >&2; exit 1; }
 
 BLACKLIST="${BLACKLIST:-blacklist.txt}"
 OUT_DIR="filtered"; mkdir -p "$OUT_DIR"
-OUT="${OUT_DIR}/grafana-${ver}.md"
+OUT="${OUT_DIR}/grafana-${ver}-table.md"
 
 # Blacklist bereinigen: Kommentare (#...) und Leerzeilen raus, trailing Space weg.
 terms="$(mktemp)"; trap 'rm -f "$terms"' EXIT
