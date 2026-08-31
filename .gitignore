@@ -1,0 +1,4 @@
+# Deploy-Key-Paar NIE committen (privater Schluessel!)
+grafana_changelog_deploy
+grafana_changelog_deploy.pub
+*.pem
