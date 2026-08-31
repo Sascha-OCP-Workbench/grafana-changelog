@@ -1,0 +1,9 @@
+# Beispiel-Blacklist fuer scripts/filter-changelog.sh
+# Kopieren nach blacklist.txt (bleibt lokal, wird nicht committet).
+#
+# Ein Stichwort pro Zeile. Teilstring-Match, Gross-/Kleinschreibung egal.
+# Jede Changelog-Zeile, die eines dieser Woerter enthaelt, wird entfernt.
+# Zeilen mit fuehrendem '#' und Leerzeilen sind Kommentare.
+
+azure
+alerting

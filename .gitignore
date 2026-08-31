@@ -2,3 +2,7 @@
 grafana_changelog_deploy
 grafana_changelog_deploy.pub
 *.pem
+
+# Lokale Filter-Blacklist + gefilterte Ausgaben (bleiben lokal)
+blacklist.txt
+filtered/
