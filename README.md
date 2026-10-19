@@ -18,10 +18,12 @@ Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **H
 
 ## Releases
 
+- Grafana 13.2.4: [Tabelle](releases/grafana-13.2.4-table.md) · [Prosa](releases/grafana-13.2.4.md)
 - Grafana 13.2.3: [Tabelle](releases/grafana-13.2.3-table.md) · [Prosa](releases/grafana-13.2.3.md)
 - Grafana 13.2.2: [Tabelle](releases/grafana-13.2.2-table.md) · [Prosa](releases/grafana-13.2.2.md)
 - Grafana 13.2.1: [Tabelle](releases/grafana-13.2.1-table.md) · [Prosa](releases/grafana-13.2.1.md)
 - Grafana 13.2.0: [Tabelle](releases/grafana-13.2.0-table.md) · [Prosa](releases/grafana-13.2.0.md)
+- Grafana 13.1.8: [Tabelle](releases/grafana-13.1.8-table.md) · [Prosa](releases/grafana-13.1.8.md)
 - Grafana 13.1.7: [Tabelle](releases/grafana-13.1.7-table.md) · [Prosa](releases/grafana-13.1.7.md)
 - Grafana 13.1.6: [Tabelle](releases/grafana-13.1.6-table.md) · [Prosa](releases/grafana-13.1.6.md)
 - Grafana 13.1.5: [Tabelle](releases/grafana-13.1.5-table.md) · [Prosa](releases/grafana-13.1.5.md)
@@ -30,6 +32,7 @@ Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **H
 - [Grafana 13.1.2](releases/grafana-13.1.2.md)
 - [Grafana 13.1.1](releases/grafana-13.1.1.md)
 - [Grafana 13.1.0](releases/grafana-13.1.0.md)
+- Grafana 13.0.11: [Tabelle](releases/grafana-13.0.11-table.md) · [Prosa](releases/grafana-13.0.11.md)
 - Grafana 13.0.10: [Tabelle](releases/grafana-13.0.10-table.md) · [Prosa](releases/grafana-13.0.10.md)
 - Grafana 13.0.9: [Tabelle](releases/grafana-13.0.9-table.md) · [Prosa](releases/grafana-13.0.9.md)
 - Grafana 13.0.8: [Tabelle](releases/grafana-13.0.8-table.md) · [Prosa](releases/grafana-13.0.8.md)
@@ -41,6 +44,7 @@ Kategorien je Release: **Breaking Changes**, **Hilfreiche neue Funktionen**, **H
 - [Grafana 13.0.2](releases/grafana-13.0.2.md)
 - [Grafana 13.0.1+security-01](releases/grafana-13.0.1+security-01.md)
 - [Grafana 13.0.1](releases/grafana-13.0.1.md)
+- Grafana 12.4.13: [Tabelle](releases/grafana-12.4.13-table.md) · [Prosa](releases/grafana-12.4.13.md)
 - Grafana 12.4.12: [Tabelle](releases/grafana-12.4.12-table.md) · [Prosa](releases/grafana-12.4.12.md)
 - Grafana 12.4.11: [Tabelle](releases/grafana-12.4.11-table.md) · [Prosa](releases/grafana-12.4.11.md)
 - Grafana 12.4.10: [Tabelle](releases/grafana-12.4.10-table.md) · [Prosa](releases/grafana-12.4.10.md)
